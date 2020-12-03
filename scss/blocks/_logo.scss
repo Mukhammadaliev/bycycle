@@ -4,7 +4,11 @@
 .main-logo {
   display: none;
 }
-
+.contact-logo {
+  display: inline-block;
+  width: 94px;
+  margin-bottom: 20px;
+}
 
 @include breakpoint-down (900) {
   .logo {
@@ -15,5 +19,8 @@
   .main-logo {
     width: 60px;
     display: block;
+  }
+  .contact-logo {
+    width: 60px;
   }
 }

@@ -15,5 +15,7 @@
 }
 
 @include breakpoint-down (600) {
-  padding: 50px 20px;
+  .hero {
+    padding: 50px 20px;
+  }
 }
