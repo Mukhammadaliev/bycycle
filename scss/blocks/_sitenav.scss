@@ -1,0 +1,51 @@
+
+
+.navbar__list {
+  display: grid;
+  grid-template-columns: repeat(5, 94px);
+  column-gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__item {
+  justify-self: center;
+}
+.navbar__link {
+  display: inline-block;
+  color: #4D4959;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.menu-burger {
+  display: none;
+}
+@include breakpoint-down (800) {
+  .navbar__list {
+    display: none;
+  }
+  .header__nav {
+    display: grid;
+    padding: 0 20px;
+    grid-template-columns: 1fr 1fr;
+}
+  .navbar__list {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    justify-content: start;
+  }
+  .navbar__item {
+  justify-self: start;
+  }
+  .menu-burger {
+    display: block;
+    justify-self: end;
+    align-self: center;
+    padding: 18px;
+    border: 0;
+    background-color: transparent;
+    background-image: url("../img/gamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+}

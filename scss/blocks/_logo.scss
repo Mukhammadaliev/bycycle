@@ -1,0 +1,19 @@
+.logo {
+  width: 94px;
+}
+.main-logo {
+  display: none;
+}
+
+
+@include breakpoint-down (900) {
+  .logo {
+    width: 60px;
+  }
+}
+@include breakpoint-down (800) {
+  .main-logo {
+    width: 60px;
+    display: block;
+  }
+}

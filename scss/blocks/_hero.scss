@@ -1,0 +1,19 @@
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #F7F7F7;
+}
+.hero__title {
+  &::before {
+    background-image: url("../img/hero-title-before.png");
+  }
+}
+
+.hero__text {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@include breakpoint-down (600) {
+  padding: 50px 20px;
+}

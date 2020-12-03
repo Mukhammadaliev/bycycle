@@ -1,0 +1,21 @@
+.header {
+  height: 100vh;
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 30px;
+}
+
+
+@include breakpoint-down (1000) {
+  .header {
+    height: 80vh;
+  }
+}
+@include breakpoint-down (800) {
+  .header {
+    height: 60vh;
+    padding-top: 20px;
+  }
+}
