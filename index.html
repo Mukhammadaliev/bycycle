@@ -166,7 +166,7 @@
         </a>
         <p class="contact__text">Stay on the saddle!</p>
         <form method="POST" class="contact__form">
-          <input type="email" placeholder="enter your email... " class="form__email">
+          <input type="email" required placeholder="enter your email... " class="form__email">
           <button class="contact__btn" type="submit">GO</button>
         </form>
       </div>
@@ -202,5 +202,16 @@
     </div>
   </footer>
 
+
+
+    <script>
+      var elModalToggler = document.querySelector('.menu-burger');
+      var elModal = document.querySelector('.header');
+      var elModalClose = document.querySelector('.header--open');
+
+      elModalToggler.addEventListener('click', function () {
+        elModal.classList.toggle('header--open');
+      });
+    </script>
 </body>
 </html>

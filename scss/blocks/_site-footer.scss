@@ -30,6 +30,10 @@
 }
 .social__link {
   display: inline-block;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 .footer__img {
   display: inline-block;

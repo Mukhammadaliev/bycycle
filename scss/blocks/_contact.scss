@@ -39,6 +39,14 @@
   border: 0;
   outline: 0;
   background-color: #64C29E;
+  color: #fff;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:focus {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 @include breakpoint-down (900) {

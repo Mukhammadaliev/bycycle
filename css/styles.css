@@ -462,6 +462,14 @@ img {
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.navbar__link:hover {
+  opacity: 0.7;
 }
 
 .menu-burger {
@@ -471,6 +479,33 @@ img {
 @media only screen and (max-width: 800px) {
   .navbar__list {
     display: none;
+  }
+  .header--open {
+    position: relative;
+  }
+  .header--open .navbar__list {
+    display: -ms-grid;
+    display: grid;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 75px 100px;
+    z-index: 11;
+    background-color: rgba(255, 255, 255, 0.9);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header--open .navbar__item:nth-child(3) {
+    display: none;
+  }
+  .header--open .menu-burger {
+    background-image: url("../img/gamburger-close.svg");
   }
   .header__nav {
     display: -ms-grid;
@@ -500,6 +535,8 @@ img {
         -ms-grid-row-align: center;
         align-self: center;
     padding: 18px;
+    position: relative;
+    z-index: 12;
     border: 0;
     outline: 0;
     background-color: transparent;
@@ -1756,6 +1793,18 @@ img {
   border: 0;
   outline: 0;
   background-color: #64C29E;
+  color: #fff;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.contact__btn:hover {
+  opacity: 0.7;
+}
+
+.contact__btn:focus {
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (max-width: 900px) {
@@ -1855,6 +1904,12 @@ img {
 
 .social__link {
   display: inline-block;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.social__link:hover {
+  opacity: 0.7;
 }
 
 .footer__img {
